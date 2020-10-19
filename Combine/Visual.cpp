@@ -3,8 +3,8 @@
 
 
 Visual::Visual(Board *board)
-    :window(sf::VideoMode(800,1000),"Combine"),board(board),
-     sqr_s(60),
+    :window(sf::VideoMode(400,500),"Combine"),board(board),
+     sqr_s(30),
      
      /*Creates a 2D vector that storages the squares, it's higher in the vertical in order to 
        show the squares of the next piece*/
@@ -23,7 +23,7 @@ void Visual::initialize_g_board(){
         
         for(int x=0;x<g_board[0].size();x++){
             
-            g_board[y][x].setPosition(sf::Vector2f(100+x*sqr_s,100+y*sqr_s));
+            g_board[y][x].setPosition(sf::Vector2f(50+x*sqr_s,50+y*sqr_s));
             g_board[y][x].setFillColor(sf::Color::White);
             g_board[y][x].setOutlineColor(sf::Color::Black);
             g_board[y][x].setOutlineThickness(1);
